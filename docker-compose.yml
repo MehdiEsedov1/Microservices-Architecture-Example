@@ -25,13 +25,15 @@ services:
       - zookeeper
 
   producer:
-    build: ./producer-service
+    build:
+      context: ./producer-service
     container_name: producer
     depends_on:
       - kafka
 
   consumer:
-    build: ./consumer-service
+    build:
+      context: ./consumer-service
     container_name: consumer
     depends_on:
       - kafka

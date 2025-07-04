@@ -17,7 +17,7 @@ public class Main {
             ProducerRecord<String, String> record = new ProducerRecord<>("demo-topic", "Hello from Java Producer");
             producer.send(record);
             System.out.println("Sent message");
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         }
     }
 }
